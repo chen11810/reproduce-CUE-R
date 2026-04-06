@@ -4,7 +4,7 @@ R语言复现：氮添加对土壤微生物碳利用效率影响研究。
 
 若使用本数据集或代码，请按以下格式引用：
 
-Yin, T. 等 (2025). 氮富集下微生物碳利用效率关键驱动因素的荟萃分析与机器学习研究 数据集与代码. Zenodo. [DOI将在Zenodo发布后补充]
+Yin, T., et al. (2025). Dataset and code for "Meta-analysis and Machine Learning Reveal Key Drivers of Microbial Carbon Use Efficiency Under Nitrogen Enrichment"
 
 ---
 
