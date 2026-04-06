@@ -21,11 +21,13 @@ my_colormap <- brewer.pal(8, 'Spectral')
 #-----1. Sampling point map-----
 scatter_df <- read.csv("extracted_data.csv") 
 scatter_df_tro <- st_as_sf(scatter_df, coords = c("Longitude", "Latitude"), crs = 4326)
+
 library(rnaturalearth)
 library(sf)
-
 global <- ne_countries(scale = "medium", returnclass = "sf")
-#global <- st_read("global.shp")#The shp file needs to be prepared in advance and placed in the working path.
+
+#The shp file needs to be prepared in advance and placed in the working path.
+
 p0 <- ggplot() + 
   geom_sf(data = global, fill = "lightgray", color = "black", size = 0.6) + 
   geom_sf(data = scatter_df_tro, color = "darkgray", shape = 21, size = 1, fill = "red") + 
@@ -35,6 +37,7 @@ p0 <- ggplot() +
     plot.subtitle = element_markdown(hjust = 0.5, size = 12, color = "#555555", margin = margin(t = 1, b = 12)),
     legend.position = "right", legend.text = element_text(size = 9)
   )
+
 ggsave("Figure 1 Geographic distribution of observational field studies included in the meta-analysis.pdf", 
        p0, width = 7.52, height = 5.69, units = "in", dpi = 500)
 
